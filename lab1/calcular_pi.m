@@ -1,21 +1,19 @@
-precision = input('ingresar el valor de la precision')
+disp(' ########### Ejercicio 5 ##############')
 
-function pi_aprox = aproximar_pi(precision)
-    % Inicializar variables
-    pi_aprox = 0;
-    signo = 1;
-    i = 0;
-    
-    % Cálculo de Pi usando la serie de Taylor
-    while abs(pi_aprox - pi) > precision
-        pi_aprox = pi_aprox + signo * 4 / (2 * i + 1);
-        signo = -signo;  % Alternar el signo
-        i = i + 1;
+
+function pi_aproximado = aproximar_pi(n)
+    pi_aproximado = 0;
+    for i = 0:(n-1)
+        pi_aproximado += 4 * ((-1) ^ i) / (2 * i + 1);
     end
-    
-    % Mostrar resultados
-    fprintf('Aproximación de Pi con precisión de %.10f: %.15f\n', precision, pi_aprox);
-    fprintf('Número de términos usados: %d\n', i);
-endc
+end
 
-% Ejemplo de uso: calcular Pi con 3, 4 y 5 dígitos decimales exact
+function main()
+    n = input('Ingrese el número de términos para la aproximación de π: ');
+    
+    pi_aproximado = aproximar_pi(n);
+    
+    fprintf('La aproximación de π con %d términos es: %f\n', n, pi_aproximado);
+end
+
+main()
