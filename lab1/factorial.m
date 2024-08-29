@@ -1,15 +1,19 @@
-entero = input ('ingrese un numero entero:');
+entero = input('Ingrese un número entero: ', 's'); 
 
-if entero < 0 || entero ~= fix(entero)
-    fprintf('Entero debe ser un numero entero no negativo');
+entero = str2double(entero); 
+
+if isnan(entero) || isempty(entero) || entero < 0 || entero ~= fix(entero)
+    fprintf('El número debe ser un entero no negativo.\n');
     return
 end
 
-factorial = 1;
+function result = factorial_entero(entero)
+    result = 1;
 
-for i = 1 : entero
-    factorial = factorial * i;
+    for i = 1:entero
+        result = result * i;
+    end
 end
 
-
-fprintf('el factorial es %d\n', entero, factorial);
+resultado = factorial_entero(entero);
+fprintf('El factorial de %d es: %d\n', entero, resultado);

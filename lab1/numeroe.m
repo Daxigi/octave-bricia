@@ -1,16 +1,18 @@
-N = input('Ingrese un valor para N: ');
+n = input('Ingrese un valor para N: ');
 
 function f = mi_factorial(m)
     f = 1; 
+
     for i = 1:m  
         f = f * i;
     end
 end
 
-e = 1;
+e = 1; %primer termino 
 
-for i = 1:N
+%se calcula e en base a la serie de taylor-mclaurin en este caso
+for i = 1:n
     e = e + 1 / mi_factorial(i); 
 end
 
-fprintf('El valor de e es: %f\n', e); 
+fprintf('El valor de e usando %d términos es: %f\n', n+1, e); % %f muestra 6 decimales
