@@ -15,4 +15,4 @@ for i = 1:n
     e = e + 1 / mi_factorial(i); 
 end
 
-fprintf('El valor de e usando %d términos es: %f\n', n+1, e); % %f muestra 6 decimales
+fprintf('El valor de e usando %d términos es: %0.15f\n', n+1, e); % %f muestra 6 decimales
