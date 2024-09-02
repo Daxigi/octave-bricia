@@ -2,7 +2,7 @@ n = input('Ingrese un valor para N: ', 's');
 
 n = str2double(n);
 
-if  ~isnan(n) || isempty(n)|| n < 0 || n ~= fix(n)  
+if  isnan(n) || isempty(n)|| n < 0 || n ~= fix(n)  
     fprintf('N debe ser un número entero no negativo.\n');
     return
 end
