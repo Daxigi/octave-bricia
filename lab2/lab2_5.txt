@@ -1,0 +1,69 @@
+
+// Para abordar esta pregunta correctamente, dividiremos el análisis en las dos partes solicitadas: 
+
+// ### a) ¿Es ese el valor real del área?
+
+// Dado que el área se calculó utilizando valores aproximados de las raíces cuadradas, es importante verificar si el uso de esos valores aproxima correctamente el área real.
+
+// #### Valores aproximados utilizados:
+// - \( \sqrt{2} \approx 1.41 \)
+// - \( \sqrt{8} \approx 2.83 \)
+
+// El área fue calculada como:
+
+// \[
+// A_{\text{aproximada}} = 1.41 \times 2.83 = 3.99 \, \text{m}^2
+// \]
+
+// #### Cálculo exacto:
+
+// Para encontrar el valor real del área, utilizaremos los valores exactos de las raíces cuadradas:
+
+// - Ancho real: \( \sqrt{2} \, \text{m} \)
+// - Largo real: \( \sqrt{8} = 2\sqrt{2} \, \text{m} \)
+
+// Por lo tanto, el área exacta sería:
+
+// \[
+// A_{\text{real}} = \sqrt{2} \times \sqrt{8} = \sqrt{2} \times 2\sqrt{2} = 2 \times 2 = 4 \, \text{m}^2
+// \]
+
+// #### Conclusión:
+
+// El valor aproximado de \( 3.99 \, \text{m}^2 \) no es el valor real. **El área real es de \( 4 \, \text{m}^2 \)**. La diferencia es debido a los errores de redondeo al usar valores aproximados para las raíces cuadradas.
+
+// ### b) ¿Existe alguna otra forma de calcular el área de manera más exacta?
+
+// La manera más exacta de calcular el área es **no utilizar valores aproximados de las raíces cuadradas**. Es preferible mantener las raíces cuadradas en su forma simbólica durante todo el cálculo y solo evaluar el resultado numérico al final, si es necesario.
+
+// #### Método más exacto:
+
+// Para evitar errores de redondeo, podemos mantener los valores exactos de las raíces cuadradas durante los cálculos:
+
+// \[
+// A = \sqrt{2} \times \sqrt{8} = \sqrt{16} = 4 \, \text{m}^2
+// \]
+
+// Este cálculo simbólico asegura que no hay pérdida de precisión. Si se necesita expresar el área numéricamente, se puede redondear al final (aunque en este caso, el valor exacto es un número entero).
+
+// ### Código en Octave para calcular el área exacta y aproximada:
+
+// ```octave
+// % Cálculo del área con valores exactos
+// ancho_real = sqrt(2);
+// largo_real = sqrt(8);
+
+// area_real = ancho_real * largo_real;
+// fprintf('El área real es: %.2f m^2\n', area_real);
+
+// % Cálculo del área con valores aproximados
+// ancho_aprox = 1.41;
+// largo_aprox = 2.83;
+
+// area_aprox = ancho_aprox * largo_aprox;
+// fprintf('El área aproximada es: %.2f m^2\n', area_aprox);
+// ```
+
+// ### Conclusión final:
+// - El valor aproximado del área \( 3.99 \, \text{m}^2 \) no es el real debido a los errores de redondeo en las raíces cuadradas.
+// - La forma más exacta de calcular el área es utilizando los valores exactos de las raíces cuadradas, lo que nos da un área real de \( 4 \, \text{m}^2 \).
