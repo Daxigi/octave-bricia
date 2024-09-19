@@ -1,30 +1,35 @@
-% Inicialización
-N = 100000; % Número de sumas
-sum_simple_1 = single(0);   % Precisión simple para el número 1
-sum_simple_0_00001 = single(0);  % Precisión simple para el número 0.00001
-sum_double_0_00001 = double(0);  % Precisión doble para el número 0.00001
+n = 100000; %cantidad de veces a sumar
+sum_simple_1 = single(0);   % precisión simple para 1
+sum_simple_0_00001 = single(0);  % precisión simple para 0.00001
+sum_double_0_00001 = double(0);  % precisión doble para 0.00001
 
-% Sumar el número 1 con precisión simple N veces
-for i = 1:N
+% suma número 1 con precisión simple n veces
+for i = 1:n
     sum_simple_1 = sum_simple_1 + single(1);
 end
 
-% Sumar el número 0.00001 con precisión simple N veces
-for i = 1:N
+% suma número 0.00001 con precisión simple n veces
+for i = 1:n
     sum_simple_0_00001 = sum_simple_0_00001 + single(0.00001);
 end
 
-% Sumar el número 0.00001 con precisión doble N veces
-for i = 1:N
+% suma número 0.00001 con precisión doble n veces
+for i = 1:n
     sum_double_0_00001 = sum_double_0_00001 + double(0.00001);
 end
 
-% Mostrar los resultados
-fprintf('Suma del número 1 (precisión simple): %.8f\n', sum_simple_1);
-fprintf('Suma del número 0.00001 (precisión simple): %.8f\n', sum_simple_0_00001);
+
+fprintf('Suma del número 1 (precisión simple): %.15f\n', sum_simple_1);
+fprintf('Suma del número 0.00001 (precisión simple): %.15f\n', sum_simple_0_00001);
 fprintf('Suma del número 0.00001 (precisión doble): %.15f\n', sum_double_0_00001);
 
-% Comparar con el valor exacto esperado
-exact_simple = N * 0.00001;
-exact_double = N * 0.00001;
+% valor esperado 
+exact_simple = n * 0.00001;
+exact_double = n * 0.00001;
+
 fprintf('Valor exacto esperado: %.15f\n', exact_double);
+ue disminuye la precisión
+%resultados
+% - precisión + error de redondeo
+% prec simple tiene errores más grandes en la suma acumulativa
+% prec doble tiene errores más pequeños en la suma acumulativa
