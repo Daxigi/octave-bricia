@@ -13,8 +13,12 @@ e_exacto = exp(1);
 cociente_exacto = pi_exacto / e_exacto;
 
 
-fprintf('Cociente con valores redondeados: %.6f\n', cociente_redondeado);
+fprintf('Cociente con valores redondeados: %.6f\n', cociente_redondeado); 
 fprintf('Cociente con valores exactos: %.15f\n', cociente_exacto);
 
 % comparación de los cocientes
 fprintf('Diferencia entre el cociente redondeado y el exacto: %.15f\n', abs(cociente_redondeado - cociente_exacto));
+
+% con valores redondeados tiene seis dígitos significativos
+% el cociente redondeado a seis dígitos decimales tiene seis dígitos decimales correctos.
+

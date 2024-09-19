@@ -23,3 +23,5 @@ else
     fprintf('Ambas mediciones tienen la misma precisión. \n');
 end
 
+%error relativo - medición + cerca del valor real, medicion mas precisa
+

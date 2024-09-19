@@ -33,3 +33,6 @@ if discriminante2 >= 0
 else
     fprintf('No hay soluciones reales para c = 10^8.\n');
 end
+
+% c:1 la medida tenía errores debido a la complejidad del cálculo del discriminante y su pequeña magnitud
+% c : 10^8 los cálculos son bastante consistentes, mostrando que cuando c es grande se ajusta a las expectativas
